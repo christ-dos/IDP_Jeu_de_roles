@@ -25,10 +25,13 @@ public class Codeuse extends Personnage {
         return pdef;
     }
 
+
     @Override
     public String toString() {
-        return "Codeuse []";
+        return "Codeuse [toString()=" + super.toString() + "]";
     }
+
+   
 
     
     

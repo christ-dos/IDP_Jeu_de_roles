@@ -25,9 +25,12 @@ private static int pdef;
         return pdef;
     }
 
+
     @Override
     public String toString() {
-        return "Vampirette []";
+        return "Vampirette [toString()=" + super.toString() + "]";
     }
+
+    
 
 }
