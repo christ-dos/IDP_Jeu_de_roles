@@ -9,7 +9,8 @@ public class Codeuse extends Personnage {
     public Codeuse() {
         
         this.pdef=35;
-        super.armes.add(null); // todo : ajouter l'arme !!!!!!!!!!!!!!!!!!!!!
+        super.armes.add(new Ordinateur()); // todo : ajouter l'arme !!!!!!!!!!!!!!!!!!!!!
+        super.setNom("Codeuse");
     }
     
 
@@ -17,6 +18,7 @@ public class Codeuse extends Personnage {
         super(nom, pv, exp, armes);
         this.pdef=35;
         super.armes.add(null); // todo : ajouter l'arme !!!!!!!!!!!!!!!!!!!!!
+        super.setNom("Codeuse");
     }
 
 

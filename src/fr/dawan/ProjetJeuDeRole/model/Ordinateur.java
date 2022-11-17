@@ -8,12 +8,14 @@ public class Ordinateur extends Arme {
     public Ordinateur () {
         this.idPc = 1;
         this.degat=5;
-        
+        this.setNomArme("ordinateur");
     }
 
     public Ordinateur(String nomArme, int degat ) {
         super(nomArme, degat);
         this.idPc = 1;
+        this.degat=5;
+        this.setNomArme("ordinateur");
     }
 
     public int getIdPc() {

@@ -10,6 +10,7 @@ private static int pdef;
         
         this.pdef=20;
         super.armes.add(null); // todo : ajouter l'arme !!!!!!!!!!!!!!!!!!!!!
+        super.setNom("Vampirette");
     }
     
 
@@ -17,6 +18,7 @@ private static int pdef;
         super(nom, pv, exp, armes);
         this.pdef=20;
         super.armes.add(null); // todo : ajouter l'arme !!!!!!!!!!!!!!!!!!!!!
+        super.setNom("Vampirette");
     }
 
 

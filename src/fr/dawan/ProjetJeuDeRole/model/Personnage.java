@@ -4,30 +4,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Personnage {
-    //___________________________________Attribut_______________________________________________________
+    // ___________________________________Attribut_______________________________________________________
     private String nom;
     private int pv;
-    private int exp=0;
+    private int exp = 0;
     static private int pdef;
-    
-    List<Arme>armes= new ArrayList<>();
-    
-    //_________________________________________constructor_____________________________________________
-    
+
+    List<Arme> armes = new ArrayList<>();
+
+    // _________________________________________constructor_____________________________________________
+
     public Personnage() {
-        
-        this.pv=10;
+
+        this.pv = 10;
+        this.pdef = 0;
     }
-    
-    public Personnage(String nom, int pv, int exp, List<Arme>armes) {
+
+    public Personnage(String nom, int pv, int exp, List<Arme> armes) {
         super();
         this.nom = nom;
         this.pv = pv;
         this.exp = exp;
-        this.pv=10;
-        this.armes=armes;
+        this.pv = 10;
+        this.armes = armes;
+        this.pdef = 0;
     }
-    //___________________________________________getter/setter_____________________________________________
+    // ___________________________________________getter/setter_____________________________________________
 
     public List<Arme> getArmes() {
         return armes;
@@ -64,27 +66,18 @@ public class Personnage {
     public static int getPdef() {
         return pdef;
     }
-    
-    //_________________________________________toString___________________________________________________
+
+    // _________________________________________toString___________________________________________________
 
     @Override
     public String toString() {
         return "Personnage [nom=" + nom + ", pv=" + pv + ", exp=" + exp + ", armes=" + armes + "]";
     }
 
-    //_________________________________________methode____________________________________________________
-    
+    // _________________________________________methode____________________________________________________
+
     public void add(Arme arme) {
         this.armes.add(arme);
     }
-
- 
-    
-    
-    
-    
-    
-    
-    
 
 }
