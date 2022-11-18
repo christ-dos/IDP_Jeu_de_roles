@@ -5,6 +5,16 @@ import java.util.List;
 import fr.dawan.ProjetJeuDeRole.interfaces.Combat;
 
 public class Codeuse extends Personnage implements Combat{
+    public static final String RESET = "\033[0m";  // Text Reset
+    
+    // Regular Colors
+    public static final String RED = "\033[0;31m";     // RED
+    public static final String GREEN = "\033[0;32m";   // GREEN
+    public static final String YELLOW = "\033[0;33m";  // YELLOW
+    public static final String BLUE = "\033[0;34m";    // BLUE
+    public static final String PURPLE = "\033[0;35m";  // PURPLE
+    public static final String CYAN = "\033[0;36m";    // CYAN
+    public static final String WHITE = "\033[0;37m";   // WHITE
     
     private static int pv;
     
@@ -30,7 +40,7 @@ public class Codeuse extends Personnage implements Combat{
 
 
     @Override
-    public void attaque(Arme arme) { // todo a finir....
+    public void attaque(Arme arme) { 
         if (arme instanceof Ordinateur) {
             Ordinateur ordinateur = new Ordinateur();
             this. pv += ordinateur.getDegat();
@@ -43,7 +53,9 @@ public class Codeuse extends Personnage implements Combat{
             MethodesJava methodesJava = new MethodesJava();
             this.pv += methodesJava.getDegat();
         }
-        System.out.println("Vous venez attaquer votre ennemi :vous avez à present: " + this.pv + "point de vie");
+        System.out.println(GREEN + "->>Vous venez attaquer votre ennemi:");
+        System.out.println("->>Vos points de vie: " + this.pv + " point de vie" +RESET);
+        System.out.println();
     }
     
     @Override
@@ -66,6 +78,8 @@ public class Codeuse extends Personnage implements Combat{
             this.setPv(this.getPv()-methodesJava.getDegat());
             //System.out.println(this.setPv(this.getPv()-methodesJava.getDegat()));
         }
+        System.out.println(GREEN+ "->>il s'est defendu:");
+        System.out.println("->>il lui reste " + this.getPv() + " point de vie"+ RESET);
     }
 
     @Override
