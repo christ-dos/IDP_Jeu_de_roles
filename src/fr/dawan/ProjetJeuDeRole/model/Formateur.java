@@ -11,14 +11,14 @@ public class Formateur extends Personnage implements Combat {
 
     public Formateur() {
 
-        this.pv = 20;
+        this.pv = 1;
         super.armes.add(new MethodesJava());
         super.setNom("Formateur");
     }
 
     public Formateur(String nom, int pv, int exp, List<Arme> armes) {
         super(nom, pv, exp, armes);
-        this.pv = 20;
+        this.pv = 1;
         super.armes.add(new MethodesJava());
         super.setNom("Formateur");
     }
@@ -40,6 +40,9 @@ public class Formateur extends Personnage implements Combat {
         } else if (arme instanceof MethodesJava) {
             MethodesJava methodesJava = new MethodesJava();
             this.pv += methodesJava.getDegat();
+        }
+        if (this.pv < 0 ) {
+            this.pv = 0;
         }
         System.out.println( CYAN +"->>Vous venez attaquer le Joueur:");
         System.out.println("->>Vous avez à present: " + this.pv + " point de vie"+ RESET);
@@ -64,6 +67,9 @@ public class Formateur extends Personnage implements Combat {
             ennemi.setPv(ennemi.getPv() + methodesJava.getDegat());
            // this.setPv(this.getPv() - methodesJava.getDegat());
             // System.out.println(this.setPv(this.getPv()-methodesJava.getDegat()));
+        }
+        if (this.pv < 0 ) {
+            this.pv = 0;
         }
         System.out.println(CYAN + "->>Votre ennemi s'est defendu:");
         System.out.println("->>il lui reste: " + ennemi.getPv() + " point de vie" + RESET);

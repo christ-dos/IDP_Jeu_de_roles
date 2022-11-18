@@ -8,13 +8,8 @@ public class Codeuse extends Personnage implements Combat{
     public static final String RESET = "\033[0m";  // Text Reset
     
     // Regular Colors
-    public static final String RED = "\033[0;31m";     // RED
     public static final String GREEN = "\033[0;32m";   // GREEN
-    public static final String YELLOW = "\033[0;33m";  // YELLOW
-    public static final String BLUE = "\033[0;34m";    // BLUE
-    public static final String PURPLE = "\033[0;35m";  // PURPLE
     public static final String CYAN = "\033[0;36m";    // CYAN
-    public static final String WHITE = "\033[0;37m";   // WHITE
     
     private static int pv;
     
@@ -25,14 +20,12 @@ public class Codeuse extends Personnage implements Combat{
         super.setNom("Codeuse");
     }
     
-
     public Codeuse(String nom, int pv, int exp, List<Arme> armes) {
         super(nom, pv, exp, armes);
         this.pv=35;
         super.armes.add(new Ordinateur()); 
         super.setNom("Codeuse");
     }
-    
 
     public int getPv() {
         return pv;
@@ -53,8 +46,11 @@ public class Codeuse extends Personnage implements Combat{
             MethodesJava methodesJava = new MethodesJava();
             this.pv += methodesJava.getDegat();
         }
+        if (this.pv < 0 ) {
+            this.pv = 0;
+        }
         System.out.println(GREEN + "->>Vous venez attaquer votre ennemi:");
-        System.out.println("->>Vos points de vie: " + this.pv + " point de vie" +RESET);
+        System.out.println("->>Vos points de vie: " + this.pv + " point de vie");
         System.out.println();
     }
     
@@ -76,7 +72,9 @@ public class Codeuse extends Personnage implements Combat{
             this.pv -= methodesJava.getDegat();
             ennemi.setPv(ennemi.getPv() + methodesJava.getDegat());
             this.setPv(this.getPv()-methodesJava.getDegat());
-            //System.out.println(this.setPv(this.getPv()-methodesJava.getDegat()));
+        }
+        if (this.pv < 0 ) {
+            this.pv = 0;
         }
         System.out.println(GREEN+ "->>il s'est defendu:");
         System.out.println("->>il lui reste " + this.getPv() + " point de vie"+ RESET);
