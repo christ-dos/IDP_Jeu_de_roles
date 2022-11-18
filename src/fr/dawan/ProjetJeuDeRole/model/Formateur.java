@@ -12,6 +12,7 @@ private static int pdef;
         
         this.pdef=20;
         super.armes.add(new MethodesJava());
+        super.setNom("Formateur");
     }
     
 
@@ -19,6 +20,7 @@ private static int pdef;
         super(nom, pv, exp, armes);
         this.pdef=20;
         super.armes.add(new MethodesJava());
+        super.setNom("Formateur");
     }
 
     public static int getPdef() {
@@ -46,9 +48,12 @@ private static int pdef;
 
 
     @Override
-    public void estAttaque(Personnage ennemi) {
+    public void estAttaque(Personnage ennemi, Arme arme) {
         // TODO Auto-generated method stub
         
     }
+
+
+    
 
 }

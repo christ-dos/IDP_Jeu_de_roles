@@ -49,8 +49,11 @@ private static int pdef;
     }
 
 
+    
+
+
     @Override
-    public void estAttaque(Personnage ennemi) {
+    public void estAttaque(Personnage ennemi, Arme arme) {
         // TODO Auto-generated method stub
         
     }

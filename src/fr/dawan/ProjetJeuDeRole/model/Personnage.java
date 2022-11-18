@@ -66,8 +66,14 @@ public class Personnage {
     public static int getPdef() {
         return pdef;
     }
+    
+    
 
     // _________________________________________toString___________________________________________________
+
+    public static void setPdef(int pdef) {
+        Personnage.pdef = pdef;
+    }
 
     @Override
     public String toString() {

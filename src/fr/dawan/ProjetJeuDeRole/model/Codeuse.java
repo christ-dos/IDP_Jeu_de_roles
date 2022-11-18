@@ -46,8 +46,23 @@ public class Codeuse extends Personnage implements Combat{
     }
     
     @Override
-    public void estAttaque(Personnage ennemi) {
+    public void estAttaque(Personnage ennemi, Arme arme) {
         
+        if (arme instanceof Ordinateur) {
+            Ordinateur ordinateur = new Ordinateur();
+            this.pdef -= ordinateur.getDegat();
+            ennemi.setPdef(ennemi.getPdef() + ordinateur.getDegat());
+            
+        } else if (arme instanceof Cuillere) {
+            Cuillere cuillere = new Cuillere();
+            this.pdef -= cuillere.getDegat();
+            ennemi.setPdef(ennemi.getPdef() + cuillere.getDegat());
+            
+        }else if (arme instanceof MethodesJava) {
+            MethodesJava methodesJava = new MethodesJava();
+            this.pdef -= methodesJava.getDegat();
+            ennemi.setPdef(ennemi.getPdef() + methodesJava.getDegat());
+        }
     }
 
 
