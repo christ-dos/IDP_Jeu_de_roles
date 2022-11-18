@@ -4,8 +4,10 @@ import java.util.Scanner;
 
 import fr.dawan.ProjetJeuDeRole.interfaces.Combat;
 import fr.dawan.ProjetJeuDeRole.model.Codeuse;
+import fr.dawan.ProjetJeuDeRole.model.Cuillere;
 import fr.dawan.ProjetJeuDeRole.model.Formateur;
 import fr.dawan.ProjetJeuDeRole.model.MethodesJava;
+import fr.dawan.ProjetJeuDeRole.model.Ordinateur;
 import fr.dawan.ProjetJeuDeRole.model.Personnage;
 import fr.dawan.ProjetJeuDeRole.model.Vampirette;
 
@@ -68,8 +70,8 @@ public class PlateauDeJeu {
                     "*        Bienvenue chere " + codeuse.getNom() + "                                         *");
             System.out.println(
                     "*      Tu possèdes  " + codeuse.getPv() + " points de vie,                                    *");
-            System.out.println("*      tu possèdes  " + codeuse.getPdef()
-                    + " points de défense,                                *");
+//            System.out.println("*      tu possèdes  " + codeuse.getPdef()
+//                    + " points de défense,                                *");
             System.out.println("*      tu possèdes  " + codeuse.getExp()
                     + " points d'expérience,                               *");
             System.out.println("*      et tes armes :  " + codeuse.getArmes() + "*");
@@ -83,8 +85,8 @@ public class PlateauDeJeu {
                     "*       Bienvenue chere " + vampirette.getNom() + "                                             *");
             System.out.println("*      Tu possèdes  " + vampirette.getPv()
                     + " points de vie,                                         *");
-            System.out.println("*      tu possèdes  " + vampirette.getPdef()
-                    + " points de défense,                                      *");
+//            System.out.println("*      tu possèdes  " + vampirette.getPdef()
+//                    + " points de défense,                                      *");
             System.out.println("*      tu possèdes  " + vampirette.getExp()
                     + " points d'expérience                                      *");
             System.out.println("*      et tes armes :  " + vampirette.getArmes()
@@ -99,8 +101,8 @@ public class PlateauDeJeu {
                     "*       Bienvenue chere " + formateur.getNom() + "                                         *");
             System.out.println("*      Tu possèdes  " + formateur.getPv()
                     + " points de vie,                                     *");
-            System.out.println("*      tu possèdes  " + formateur.getPdef()
-                    + " points de défense,                                 *");
+//            System.out.println("*      tu possèdes  " + formateur.getPdef()
+//                    + " points de défense,                                 *");
             System.out.println("*      tu possèdes  " + formateur.getExp()
                     + " points d'expérience                                 *");
             System.out.println("*      et tes armes :  " + formateur.getArmes()
@@ -133,7 +135,7 @@ public class PlateauDeJeu {
             System.out.println("-> Si vous perdez tous vos points de vie votre Database sera perdue à tout jamais");
             System.out.println();
             System.out.println("*************************************************************************************");
-
+            System.out.println();
         }
 
     }
@@ -157,7 +159,6 @@ public class PlateauDeJeu {
 
             codeuse.attaque(perso.getArmes().get(0));
            
-            
         }else if (choixPerso == 2) {
             perso = new Vampirette();
             afficherCaracteristiquesPerso((Vampirette)perso);
@@ -177,11 +178,16 @@ public class PlateauDeJeu {
 
         Personnage p = new Personnage();
         System.out.println(p.getPv());
-        System.out.println(p.getPdef());
         Codeuse codeuse = new Codeuse();
-        System.out.println(codeuse.getPdef());
+        System.out.println(codeuse.getPv());
         MethodesJava mj = new MethodesJava();
-        System.out.println(mj);
+        System.out.println(mj.getDegat());
+        
+        Ordinateur ordi = new Ordinateur();
+        System.out.println(ordi.getDegat());
+        
+        Cuillere cu = new Cuillere();
+        System.out.println(cu.getDegat());
 
         do {
             jouer();

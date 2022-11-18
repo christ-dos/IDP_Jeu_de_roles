@@ -8,7 +8,6 @@ public class Personnage {
     private String nom;
     private int pv;
     private int exp = 0;
-    static private int pdef;
 
     List<Arme> armes = new ArrayList<>();
 
@@ -17,7 +16,7 @@ public class Personnage {
     public Personnage() {
 
         this.pv = 10;
-        this.pdef = 0;
+    
     }
 
     public Personnage(String nom, int pv, int exp, List<Arme> armes) {
@@ -27,7 +26,7 @@ public class Personnage {
         this.exp = exp;
         this.pv = 10;
         this.armes = armes;
-        this.pdef = 0;
+    
     }
     // ___________________________________________getter/setter_____________________________________________
 
@@ -63,17 +62,8 @@ public class Personnage {
         this.exp = exp;
     }
 
-    public static int getPdef() {
-        return pdef;
-    }
-    
-    
 
     // _________________________________________toString___________________________________________________
-
-    public static void setPdef(int pdef) {
-        Personnage.pdef = pdef;
-    }
 
     @Override
     public String toString() {

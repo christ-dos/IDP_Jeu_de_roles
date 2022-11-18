@@ -21,8 +21,16 @@ public class Ordinateur extends Arme {
     public int getIdPc() {
         return idPc;
     }
-
     
+    public  int getDegat() {
+        return degat;
+    }
+
+    public void setDegat(int degat) {
+        Ordinateur.degat = degat;
+    }
+
+
     @Override
     public String toString() {
         return "Nom arme: " + super.getNomArme() + " ,idPc=" + idPc + ", point de degats= " + this.degat ;

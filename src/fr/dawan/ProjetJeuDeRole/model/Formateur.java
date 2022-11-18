@@ -6,11 +6,11 @@ import fr.dawan.ProjetJeuDeRole.interfaces.Combat;
 
 public class Formateur extends Personnage implements Combat{
     
-private static int pdef;
+private static int pv;
     
     public Formateur() {
         
-        this.pdef=20;
+        this.pv=20;
         super.armes.add(new MethodesJava());
         super.setNom("Formateur");
     }
@@ -18,13 +18,13 @@ private static int pdef;
 
     public Formateur(String nom, int pv, int exp, List<Arme> armes) {
         super(nom, pv, exp, armes);
-        this.pdef=20;
+        this.pv=20;
         super.armes.add(new MethodesJava());
         super.setNom("Formateur");
     }
 
-    public static int getPdef() {
-        return pdef;
+    public int getPv() {
+        return pv;
     }
     
     @Override
@@ -35,7 +35,7 @@ private static int pdef;
 
 
     @Override
-    public void defense() {
+    public void defense(Personnage ennemi, Arme arme) {
         // TODO Auto-generated method stub
         
     }
@@ -47,11 +47,7 @@ private static int pdef;
     }
 
 
-    @Override
-    public void estAttaque(Personnage ennemi, Arme arme) {
-        // TODO Auto-generated method stub
-        
-    }
+   
 
 
     

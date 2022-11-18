@@ -22,7 +22,13 @@ public class Cuillere extends Arme {
         return idCuillere;
     }
 
-  
+    public int getDegat() {
+        return degat;
+    }
+
+    public void setDegat(int degat) {
+        Cuillere.degat = degat;
+    }
 
     @Override
     public String toString() {

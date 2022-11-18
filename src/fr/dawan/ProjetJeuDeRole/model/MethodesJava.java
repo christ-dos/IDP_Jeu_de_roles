@@ -23,6 +23,17 @@ public class MethodesJava extends Arme {
         return idMethode;
     }
 
+    public int getDegat() {
+        return degat;
+    }
+
+    public void setDegat(int degat) {
+        MethodesJava.degat = degat;
+    }
+
+    public void setIdMethode(int idMethode) {
+        this.idMethode = idMethode;
+    }
 
     @Override
     public String toString() {

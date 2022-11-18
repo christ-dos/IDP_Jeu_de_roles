@@ -6,11 +6,11 @@ import fr.dawan.ProjetJeuDeRole.interfaces.Combat;
 
 public class Codeuse extends Personnage implements Combat{
     
-    private static int pdef;
+    private static int pv;
     
     public Codeuse() {
         
-        this.pdef=35;
+        this.pv=35;
         super.armes.add(new Ordinateur()); 
         super.setNom("Codeuse");
     }
@@ -18,60 +18,55 @@ public class Codeuse extends Personnage implements Combat{
 
     public Codeuse(String nom, int pv, int exp, List<Arme> armes) {
         super(nom, pv, exp, armes);
-        this.pdef=35;
+        this.pv=35;
         super.armes.add(new Ordinateur()); 
         super.setNom("Codeuse");
     }
-
-
-
-    public static int getPdef() {
-        return pdef;
-    }
     
+
+    public int getPv() {
+        return pv;
+    }
+
+
     @Override
-    public void attaque(Arme arme) {
+    public void attaque(Arme arme) { // todo a finir....
         if (arme instanceof Ordinateur) {
             Ordinateur ordinateur = new Ordinateur();
-            this.pdef += ordinateur.getDegat();
+            this. pv += ordinateur.getDegat();
             
         } else if (arme instanceof Cuillere) {
             Cuillere cuillere = new Cuillere();
-            this.pdef += cuillere.getDegat();
+            this. pv += cuillere.getDegat();
             
         }else if (arme instanceof MethodesJava) {
             MethodesJava methodesJava = new MethodesJava();
-            this.pdef += methodesJava.getDegat();
+            this.pv += methodesJava.getDegat();
         }
-        System.out.println("Vous avez à present: " + this.pdef);
+        System.out.println("Vous venez attaquer votre ennemi :vous avez à present: " + this.pv + "point de vie");
     }
     
     @Override
-    public void estAttaque(Personnage ennemi, Arme arme) {
+    public void defense(Personnage ennemi, Arme arme) {// todo a revoir
         
         if (arme instanceof Ordinateur) {
             Ordinateur ordinateur = new Ordinateur();
-            this.pdef -= ordinateur.getDegat();
-            ennemi.setPdef(ennemi.getPdef() + ordinateur.getDegat());
+            this.pv -= ordinateur.getDegat();
+            ennemi.setPv(ennemi.getPv() + ordinateur.getDegat());
             
         } else if (arme instanceof Cuillere) {
             Cuillere cuillere = new Cuillere();
-            this.pdef -= cuillere.getDegat();
-            ennemi.setPdef(ennemi.getPdef() + cuillere.getDegat());
+            this.pv -= cuillere.getDegat();
+            ennemi.setPv(ennemi.getPv() + cuillere.getDegat());
             
         }else if (arme instanceof MethodesJava) {
             MethodesJava methodesJava = new MethodesJava();
-            this.pdef -= methodesJava.getDegat();
-            ennemi.setPdef(ennemi.getPdef() + methodesJava.getDegat());
+            this.pv -= methodesJava.getDegat();
+            ennemi.setPv(ennemi.getPv() + methodesJava.getDegat());
+            this.setPv(this.getPv()-methodesJava.getDegat());
+            //System.out.println(this.setPv(this.getPv()-methodesJava.getDegat()));
         }
     }
-
-
-    @Override
-    public void defense() {
-        
-    }
-
 
     @Override
     public String toString() {
