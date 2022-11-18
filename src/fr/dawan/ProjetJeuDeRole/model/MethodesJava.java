@@ -23,6 +23,6 @@ public class MethodesJava extends Arme {
 
     @Override
     public String toString() {
-        return "MethodesJava [idPc=" + idMethode + ", toString()=" + super.toString() + "]";
+        return "Nom arme: " + super.getNomArme() +  ", idPc=" + idMethode +", point de degats= " + this.degat ;
     }
 }

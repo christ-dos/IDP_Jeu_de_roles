@@ -23,7 +23,7 @@ public class Cuillere extends Arme {
 
     @Override
     public String toString() {
-        return "Cuillere [idPc=" + idCuillere + ", toString()=" + super.toString() + "]";
+        return "Nom arme: " + super.getNomArme() + ", idCuillere=" + idCuillere + ", point de degats= " + this.degat ;
     }
 
 }

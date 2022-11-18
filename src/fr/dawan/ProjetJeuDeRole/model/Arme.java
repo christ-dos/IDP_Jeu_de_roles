@@ -38,7 +38,7 @@ public class Arme {
 
     @Override
     public String toString() {
-        return "Arme [nomArme=" + nomArme + ", degat=" + degat + "]";
+        return "Arme [nomArme=" + nomArme + "]";
     }
     
     

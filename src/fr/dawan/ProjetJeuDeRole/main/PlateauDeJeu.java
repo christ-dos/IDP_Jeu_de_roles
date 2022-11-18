@@ -1,6 +1,10 @@
-package fr.dawan.ProjetJeuDeRole.model;
+package fr.dawan.ProjetJeuDeRole.main;
 
 import java.util.Scanner;
+
+import fr.dawan.ProjetJeuDeRole.model.Codeuse;
+import fr.dawan.ProjetJeuDeRole.model.Personnage;
+import fr.dawan.ProjetJeuDeRole.model.Vampirette;
 
 public class PlateauDeJeu {
     static Scanner scan = new Scanner(System.in);
@@ -27,7 +31,7 @@ public class PlateauDeJeu {
         System.out.println();
         System.out.println("        Choisissez votre quête           ");
         System.out.println("*****************************************");
-        System.out.println("*    1- A la poursuite du Git perdu     *");
+        System.out.println("*   1- A la poursuite du Git perdu      *");
         System.out.println("*   2- Le tresor englouti d'Hibernate   *");
         System.out.println("*****************************************");
         int choixQuete=scan.nextInt();
@@ -41,24 +45,24 @@ public class PlateauDeJeu {
         
         Codeuse codeuse=new Codeuse();
         
-        System.out.println("****************Caracteristiques du personnage*************************");
-        System.out.println("*              Bienvenue chere " + codeuse.getNom()+"                 *");
-        System.out.println("*      Tu possèdes  " +codeuse.getPv()+ " points de vie,              *");
-        System.out.println("*      tu possèdes  " +codeuse.getPdef()+ " points de défense,        *");
-        System.out.println("*       tu possèdes  " +codeuse.getExp()+ " points d'expérience,      *");
-        System.out.println("*    et tes armes :  " +codeuse.getArmes()+ "                         *");
-        System.out.println("***********************************************************************");
+        System.out.println("****************Caracteristiques du personnage****************************");
+        System.out.println("*        Bienvenue chere " + codeuse.getNom()+"                                         *");
+        System.out.println("*      Tu possèdes  " +codeuse.getPv()+ " points de vie,                                    *");
+        System.out.println("*      tu possèdes  " +codeuse.getPdef()+ " points de défense,                                *");
+        System.out.println("*      tu possèdes  " +codeuse.getExp()+ " points d'expérience,                               *");
+        System.out.println("*      et tes armes :  " +codeuse.getArmes()+ "*");
+        System.out.println("**************************************************************************");
     } else {
         
         Vampirette vampirette=new Vampirette();
         
-        System.out.println("****************Caracteristiques du personnage****************************");
-        System.out.println("*              Bienvenue chere " + vampirette.getNom()+"                 *");
-        System.out.println("*      Tu possèdes  " +vampirette.getPv()+ " points de vie,              *");
-        System.out.println("*      tu possèdes  " +vampirette.getPdef()+ " points de défense,        *");
-        System.out.println("*      tu possèdes  " +vampirette.getExp()+ " points d'expérience        *");
-        System.out.println("*    et tes armes :  " +vampirette.getArmes()+ "                         *");
-        System.out.println("**************************************************************************"); 
+        System.out.println("****************Caracteristiques du personnage*****************************");
+        System.out.println("*       Bienvenue chere " + vampirette.getNom()+"                                        *");
+        System.out.println("*      Tu possèdes  " +vampirette.getPv()+ " points de vie,                                     *");
+        System.out.println("*      tu possèdes  " +vampirette.getPdef()+ " points de défense,                                 *");
+        System.out.println("*      tu possèdes  " +vampirette.getExp()+ " points d'expérience                                 *");
+        System.out.println("*      et tes armes :  " +vampirette.getArmes()+ "                                             *");
+        System.out.println("***************************************************************************"); 
 
     }
         

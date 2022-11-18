@@ -22,10 +22,10 @@ public class Ordinateur extends Arme {
         return idPc;
     }
 
-
+    
     @Override
     public String toString() {
-        return "Ordinateur [idPc=" + idPc + ", toString()=" + super.toString() + "]";
+        return "Nom arme: " + super.getNomArme() + " ,idPc=" + idPc + ", point de degats= " + this.degat ;
     }
 
    
