@@ -1,13 +1,13 @@
 <h1>Projet jeu de Rôles👋<h1>
 <p>![image de jeux de roles](https://plateaumarmots.fr/wp-content/uploads/2018/08/initiation-au-jdr-21.jpg)<p>
 
-> Il s'agit ici d'un petit jeu de rôle en console qui fait intervenir 2 personnages: 
->    *Une codeuse
->    *Une vempirette
->    *Et leur ennemi juré le formateur
-> Ensemble ils livreont un combat sans merci!
+>###Il s'agit ici d'un petit jeu de rôle en console qui fait intervenir 2 personnages: 
+    * Une codeuse
+    * Une vempirette
+    * Et leur ennemi juré le formateur
+> ###Ensemble ils livreont un combat sans merci!
 >
-> Ce petit jeux a été codé en java.
+> ###Ce petit jeux a été codé en java.
 
 ## Usage
 
