@@ -2,7 +2,9 @@ package fr.dawan.ProjetJeuDeRole.model;
 
 import java.util.List;
 
-public class Formateur extends Personnage {
+import fr.dawan.ProjetJeuDeRole.interfaces.Combat;
+
+public class Formateur extends Personnage implements Combat{
     
 private static int pdef;
     
@@ -19,18 +21,27 @@ private static int pdef;
         super.armes.add(new MethodesJava());
     }
 
-
-
     public static int getPdef() {
         return pdef;
+    }
+    
+    @Override
+    public void attaque(Arme arme) {
+        // TODO Auto-generated method stub
+        
     }
 
 
     @Override
-    public String toString() {
-        return "Formateur [toString()=" + super.toString() + "]";
+    public void defence() {
+        // TODO Auto-generated method stub
+        
     }
 
     
+    @Override
+    public String toString() {
+        return "Formateur [toString()=" + super.toString() + "]";
+    }
 
 }

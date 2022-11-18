@@ -2,7 +2,9 @@ package fr.dawan.ProjetJeuDeRole.model;
 
 import java.util.List;
 
-public class Codeuse extends Personnage {
+import fr.dawan.ProjetJeuDeRole.interfaces.Combat;
+
+public class Codeuse extends Personnage implements Combat{
     
     private static int pdef;
     
@@ -26,12 +28,28 @@ public class Codeuse extends Personnage {
     public static int getPdef() {
         return pdef;
     }
+    
+    @Override
+    public void attaque(Arme arme) {
+        // TODO Auto-generated method stub
+        
+    }
+
+
+    @Override
+    public void defence() {
+        // TODO Auto-generated method stub
+        
+    }
 
 
     @Override
     public String toString() {
         return "Codeuse [toString()=" + super.toString() + "]";
     }
+
+
+    
 
    
 

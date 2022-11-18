@@ -2,7 +2,9 @@ package fr.dawan.ProjetJeuDeRole.model;
 
 import java.util.List;
 
-public class Vampirette extends Personnage {
+import fr.dawan.ProjetJeuDeRole.interfaces.Combat;
+
+public class Vampirette extends Personnage implements Combat{
     
 private static int pdef;
     
@@ -26,6 +28,19 @@ private static int pdef;
     public static int getPdef() {
         return pdef;
     }
+    
+    @Override
+    public void attaque(Arme arme) {
+        // TODO Auto-generated method stub
+        
+    }
+
+
+    @Override
+    public void defence() {
+        // TODO Auto-generated method stub
+        
+    }
 
 
     @Override
@@ -33,6 +48,5 @@ private static int pdef;
         return "Vampirette [toString()=" + super.toString() + "]";
     }
 
-    
 
 }
