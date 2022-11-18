@@ -9,11 +9,14 @@ public class MethodesJava extends Arme {
     public MethodesJava  () {
         this.idMethode = 3;
         this.degat=7;
+        this.setNomArme("methodes java");
     }
 
     public MethodesJava(String nomArme, int degat) {
         super(nomArme, degat);
         this.idMethode = 3;
+        this.degat=7;
+        this.setNomArme("methodes java");
     }
 
     public int getIdMethode() {

@@ -9,14 +9,14 @@ private static int pdef;
     public Formateur() {
         
         this.pdef=20;
-        super.armes.add(null); // todo : ajouter l'arme !!!!!!!!!!!!!!!!!!!!!
+        super.armes.add(new MethodesJava());
     }
     
 
     public Formateur(String nom, int pv, int exp, List<Arme> armes) {
         super(nom, pv, exp, armes);
         this.pdef=20;
-        super.armes.add(null); // todo : ajouter l'arme !!!!!!!!!!!!!!!!!!!!!
+        super.armes.add(new MethodesJava());
     }
 
 

@@ -8,11 +8,14 @@ public class Cuillere extends Arme {
     public Cuillere () {
         this.idCuillere = 2;
         this.degat=10;
+        this.setNomArme("cuillere");
     }
 
     public Cuillere(String nomArme, int degat) {
         super(nomArme, degat);
         this.idCuillere = 2;
+        this.degat=10;
+        this.setNomArme("cuillere");
     }
 
     public int getIdCuillere() {

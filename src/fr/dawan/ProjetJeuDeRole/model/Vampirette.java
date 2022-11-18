@@ -9,7 +9,7 @@ private static int pdef;
     public Vampirette() {
         
         this.pdef=20;
-        super.armes.add(null); // todo : ajouter l'arme !!!!!!!!!!!!!!!!!!!!!
+        super.armes.add(new Cuillere()); 
         super.setNom("Vampirette");
     }
     
@@ -17,7 +17,7 @@ private static int pdef;
     public Vampirette(String nom, int pv, int exp, List<Arme> armes) {
         super(nom, pv, exp, armes);
         this.pdef=20;
-        super.armes.add(null); // todo : ajouter l'arme !!!!!!!!!!!!!!!!!!!!!
+        super.armes.add(new Cuillere()); 
         super.setNom("Vampirette");
     }
 

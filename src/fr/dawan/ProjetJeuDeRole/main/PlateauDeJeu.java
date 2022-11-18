@@ -3,6 +3,7 @@ package fr.dawan.ProjetJeuDeRole.main;
 import java.util.Scanner;
 
 import fr.dawan.ProjetJeuDeRole.model.Codeuse;
+import fr.dawan.ProjetJeuDeRole.model.MethodesJava;
 import fr.dawan.ProjetJeuDeRole.model.Personnage;
 import fr.dawan.ProjetJeuDeRole.model.Vampirette;
 
@@ -72,27 +73,25 @@ public class PlateauDeJeu {
         
         if (choixQuete==1) {
             
-           
-            
-            System.out.println("****************Quete  A la poursuite du Git perdu *************************");
-            System.out.println("*     Lorem ipsum dolor sit amet, consectetur adipiscing elit, \n "
-                    + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n "
-                    + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea \n"
-                    + "commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu \n"
-                    + " fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia \n"
-                    + " deserunt mollit anim id est laborum                  \n *");
-
-            System.out.println("*****************************************************************************");
+            System.out.println("****************Quete  A la poursuite du Git perdu **********************************");
+            System.out.println();
+            System.out.println("                  ***Bienvenu sur notre quête***");
+            System.out.println("-> Votre mission si vous l'acceptez sera de trouver la branche perdue!!!");
+            System.out.println("-> Vous affronterez votre ennemi juré le Formateur, qui à coup de methodes java");
+            System.out.println("-> Pourra a tout moment casser votre code, et pousser sur votre Repo");
+            System.out.println("-> Si vous perdez tous vos points de vie pour perderez à tout jamais votre Repo Git");
+            System.out.println();
+            System.out.println("*************************************************************************************");
         } else {
-            System.out.println("****************Quete Le tresor englouti d'Hibernate *************************");
-            System.out.println("*     Lorem ipsum dolor sit amet, consectetur adipiscing elit, \n "
-                    + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n "
-                    + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea \n"
-                    + "commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu \n"
-                    + " fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia \n"
-                    + " deserunt mollit anim id est laborum                  \n *");
-
-            System.out.println("*****************************************************************************");
+            System.out.println("***************Quete  Le trésor engloutis d'Hibernate ********************************");
+            System.out.println();
+            System.out.println("                  ***Bienvenu sur notre quête***");
+            System.out.println("-> Votre mission si vous l'acceptez sera de trouver la base de données engloutie!!!");
+            System.out.println("-> Vous affronterez votre ennemi juré le Formateur, qui à coup de methodes java");
+            System.out.println("-> Pourra a tout moment casser vos requêtes Sql, et Droper vos tables");
+            System.out.println("-> Si vous perdez tous vos points de vie votre Database sera perdu à tout jamais");
+            System.out.println();
+            System.out.println("*************************************************************************************");
            
 
         } 
@@ -110,6 +109,8 @@ public class PlateauDeJeu {
         System.out.println(p.getPdef());
         Codeuse codeuse = new Codeuse();
         System.out.println(codeuse.getPdef());
+        MethodesJava mj = new MethodesJava();
+        System.out.println(mj);
         
     int choixPerso =menuPrincipal();
     afficherCaracteristiquesPerso(choixPerso);
