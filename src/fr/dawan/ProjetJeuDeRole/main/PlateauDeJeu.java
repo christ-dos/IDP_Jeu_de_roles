@@ -2,6 +2,7 @@ package fr.dawan.ProjetJeuDeRole.main;
 
 import java.util.Scanner;
 
+import fr.dawan.ProjetJeuDeRole.interfaces.Combat;
 import fr.dawan.ProjetJeuDeRole.model.Codeuse;
 import fr.dawan.ProjetJeuDeRole.model.Formateur;
 import fr.dawan.ProjetJeuDeRole.model.MethodesJava;
@@ -10,6 +11,8 @@ import fr.dawan.ProjetJeuDeRole.model.Vampirette;
 
 public class PlateauDeJeu {
     static Scanner scan = new Scanner(System.in);
+    Combat combat = new Codeuse();
+    //static Personnage perso = new Personnage();
 
     public static int menuPrincipal() {
 
@@ -42,6 +45,7 @@ public class PlateauDeJeu {
     
     public static Personnage creerPersonnage(int choixPerso) {
         Personnage perso = new Personnage();
+        
         if (choixPerso == 1) {
             perso = new Codeuse();
         }else if(choixPerso == 2){
@@ -50,6 +54,7 @@ public class PlateauDeJeu {
             perso = new Formateur();
         }
         return perso;
+        
     }
 
     public static void afficherCaracteristiquesPerso(Personnage perso) {
@@ -91,7 +96,7 @@ public class PlateauDeJeu {
 
             System.out.println("****************Caracteristiques du personnage*****************************");
             System.out.println(
-                    "*       Bienvenue chere " + formateur.getNom() + "                                        *");
+                    "*       Bienvenue chere " + formateur.getNom() + "                                         *");
             System.out.println("*      Tu possèdes  " + formateur.getPv()
                     + " points de vie,                                     *");
             System.out.println("*      tu possèdes  " + formateur.getPdef()
@@ -99,7 +104,7 @@ public class PlateauDeJeu {
             System.out.println("*      tu possèdes  " + formateur.getExp()
                     + " points d'expérience                                 *");
             System.out.println("*      et tes armes :  " + formateur.getArmes()
-                    + "                                             *");
+                    + "                                              *");
             System.out.println("***************************************************************************");
         }
     }
@@ -136,26 +141,32 @@ public class PlateauDeJeu {
     public static void jouer() {
 
         int choixPerso = menuPrincipal();
-        Personnage perso = creerPersonnage(choixPerso);
+        System.out.println("choix; " + choixPerso);
+        Personnage perso =  creerPersonnage(choixPerso);
+       // Combat persoCombat = (Combat) new Personnage();
+        
         Personnage ennemi = creerPersonnage(3);
         
         if (choixPerso == 1 ) {
+            Combat codeuse = new Codeuse();
             afficherCaracteristiquesPerso((Codeuse)perso); 
+            int choixQuete = menuQuete();
+            afficherScenarioQuete(choixQuete);
+            System.out.println("************Dans cette quête vous affronterez: **************");
+            afficherCaracteristiquesPerso(ennemi);
+
+            codeuse.attaque(perso.getArmes().get(0));
+           
+            
         }else if (choixPerso == 2) {
+            perso = new Vampirette();
             afficherCaracteristiquesPerso((Vampirette)perso);
         }
         else if (choixPerso == 3) {
+            perso = new Formateur();
             afficherCaracteristiquesPerso((Formateur)perso);
         }
-        
-        int choixQuete = menuQuete();
-        afficherScenarioQuete(choixQuete);
-        System.out.println();
-        
-        System.out.println("************Dans cette quête vous affronterez: **************");
-        System.out.println();
-        afficherCaracteristiquesPerso(ennemi);
-        
+       
     }
 
     // ____________________________________________Main________________________________________________________________

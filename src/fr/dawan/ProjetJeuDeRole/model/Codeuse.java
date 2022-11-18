@@ -43,6 +43,7 @@ public class Codeuse extends Personnage implements Combat{
             MethodesJava methodesJava = new MethodesJava();
             this.pdef += methodesJava.getDegat();
         }
+        System.out.println("Vous avez à present: " + this.pdef);
     }
     
     @Override
