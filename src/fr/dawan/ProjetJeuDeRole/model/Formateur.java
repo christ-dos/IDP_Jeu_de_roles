@@ -33,7 +33,7 @@ private static int pdef;
 
 
     @Override
-    public void defence() {
+    public void defense() {
         // TODO Auto-generated method stub
         
     }
@@ -42,6 +42,13 @@ private static int pdef;
     @Override
     public String toString() {
         return "Formateur [toString()=" + super.toString() + "]";
+    }
+
+
+    @Override
+    public void estAttaque(Personnage ennemi) {
+        // TODO Auto-generated method stub
+        
     }
 
 }

@@ -31,14 +31,28 @@ public class Codeuse extends Personnage implements Combat{
     
     @Override
     public void attaque(Arme arme) {
-        // TODO Auto-generated method stub
+        if (arme instanceof Ordinateur) {
+            Ordinateur ordinateur = new Ordinateur();
+            this.pdef += ordinateur.getDegat();
+            
+        } else if (arme instanceof Cuillere) {
+            Cuillere cuillere = new Cuillere();
+            this.pdef += cuillere.getDegat();
+            
+        }else if (arme instanceof MethodesJava) {
+            MethodesJava methodesJava = new MethodesJava();
+            this.pdef += methodesJava.getDegat();
+        }
+    }
+    
+    @Override
+    public void estAttaque(Personnage ennemi) {
         
     }
 
 
     @Override
-    public void defence() {
-        // TODO Auto-generated method stub
+    public void defense() {
         
     }
 
