@@ -4,10 +4,7 @@ import java.util.Scanner;
 
 import fr.dawan.ProjetJeuDeRole.interfaces.Combat;
 import fr.dawan.ProjetJeuDeRole.model.Codeuse;
-import fr.dawan.ProjetJeuDeRole.model.Cuillere;
 import fr.dawan.ProjetJeuDeRole.model.Formateur;
-import fr.dawan.ProjetJeuDeRole.model.MethodesJava;
-import fr.dawan.ProjetJeuDeRole.model.Ordinateur;
 import fr.dawan.ProjetJeuDeRole.model.Personnage;
 import fr.dawan.ProjetJeuDeRole.model.Vampirette;
 
@@ -30,9 +27,9 @@ public class PlateauDeJeu {
         System.out.println();
         System.out.println(YELLOW + "    Choisissez un personnage   ");
         System.out.println("*******************************" + RESET);
-        System.out.println(YELLOW +"*"+ RESET +"     1-The Codeuse !!!!!     "+YELLOW +"*"+ RESET);
-        System.out.println(YELLOW +"*"+ RESET +"     2-The Vampirette !!     "+YELLOW +"*");
-        System.out.println("*******************************" +RESET);
+        System.out.println(YELLOW + "*" + RESET + "     1-The Codeuse !!!!!     " + YELLOW + "*" + RESET);
+        System.out.println(YELLOW + "*" + RESET + "     2-The Vampirette !!     " + YELLOW + "*");
+        System.out.println("*******************************" + RESET);
         int choixPerso = scan.nextInt();
 
         return choixPerso;
@@ -44,9 +41,9 @@ public class PlateauDeJeu {
         System.out.println();
         System.out.println(YELLOW + "        Choisissez votre quête           ");
         System.out.println("*****************************************" + RESET);
-        System.out.println(YELLOW +"*"+ RESET + "   1- A la poursuite du Git perdu      "+YELLOW +"*"+ RESET);
-        System.out.println(YELLOW +"*"+ RESET + "   2- Le tresor englouti d'Hibernate   "+YELLOW +"*"+ RESET);
-        System.out.println(YELLOW +"*****************************************"+ RESET);
+        System.out.println(YELLOW + "*" + RESET + "   1- A la poursuite du Git perdu      " + YELLOW + "*" + RESET);
+        System.out.println(YELLOW + "*" + RESET + "   2- Le tresor englouti d'Hibernate   " + YELLOW + "*" + RESET);
+        System.out.println(YELLOW + "*****************************************" + RESET);
         int choixQuete = scan.nextInt();
 
         return choixQuete;
@@ -74,42 +71,48 @@ public class PlateauDeJeu {
 
             System.out.println(
                     YELLOW + "****************Caracteristiques du personnage****************************" + RESET);
+            System.out.println(YELLOW + "*" + RESET + "        Bienvenue chere " + codeuse.getNom()
+                    + "                                         " + YELLOW + "*" + RESET);
+            System.out.println(YELLOW + "*" + RESET + "      Tu possèdes  " + codeuse.getPv()
+                    + " points de vie,                                    " + YELLOW + "*" + RESET);
+            System.out.println(YELLOW + "*" + RESET + "      tu possèdes  " + codeuse.getExp()
+                    + " points d'expérience,                               " + YELLOW + "*" + RESET);
             System.out.println(
-                    YELLOW +"*"+ RESET +"        Bienvenue chere " + codeuse.getNom() + "                                         "+YELLOW +"*"+ RESET);
+                    YELLOW + "*" + RESET + "      et tes armes :  " + codeuse.getArmes() + "" + YELLOW + "*" + RESET);
             System.out.println(
-                    YELLOW +"*"+ RESET +"      Tu possèdes  " + codeuse.getPv() + " points de vie,                                    "+YELLOW +"*"+ RESET);
-            System.out.println(YELLOW +"*"+ RESET +"      tu possèdes  " + codeuse.getExp()
-                    + " points d'expérience,                               "+YELLOW +"*"+ RESET);
-            System.out.println(YELLOW +"*"+ RESET +"      et tes armes :  " + codeuse.getArmes() + ""+YELLOW +"*"+ RESET);
-            System.out.println(YELLOW +"**************************************************************************"+ RESET);
+                    YELLOW + "**************************************************************************" + RESET);
         } else if (perso instanceof Vampirette) {
 
             Vampirette vampirette = (Vampirette) perso;
 
+            System.out.println(YELLOW
+                    + "******************Caracteristiques du personnage********************************" + RESET);
+            System.out.println(YELLOW + "*" + RESET + "       Bienvenue chere " + vampirette.getNom()
+                    + "                                             " + YELLOW + "*" + RESET);
+            System.out.println(YELLOW + "*" + RESET + "      Tu possèdes  " + vampirette.getPv()
+                    + " points de vie,                                           " + YELLOW + "*" + RESET);
+            System.out.println(YELLOW + "*" + RESET + "      tu possèdes  " + vampirette.getExp()
+                    + " points d'expérience                                      " + YELLOW + "*" + RESET);
             System.out.println(
-                    YELLOW + "******************Caracteristiques du personnage********************************" + RESET);
-            System.out.println(YELLOW +"*"+ RESET +"       Bienvenue chere " + vampirette.getNom()
-                    + "                                             "+YELLOW +"*"+ RESET);
-            System.out.println(YELLOW +"*"+ RESET +"      Tu possèdes  " + vampirette.getPv()
-                    + " points de vie,                                           "+YELLOW +"*"+ RESET);
-            System.out.println(YELLOW +"*"+ RESET +"      tu possèdes  " + vampirette.getExp()
-                    + " points d'expérience                                      "+YELLOW +"*"+ RESET);
-            System.out.println(YELLOW +"*"+ RESET +"      et tes armes :  " + vampirette.getArmes() +YELLOW +" *"+ RESET);
-            System.out.println(YELLOW +"********************************************************************************" +RESET);
+                    YELLOW + "*" + RESET + "      et tes armes :  " + vampirette.getArmes() + YELLOW + " *" + RESET);
+            System.out.println(YELLOW
+                    + "********************************************************************************" + RESET);
         } else if (perso instanceof Formateur) {
 
             Formateur formateur = (Formateur) perso;
 
             System.out.println(
                     YELLOW + "****************Caracteristiques du personnage********************************" + RESET);
-            System.out.println(YELLOW +"*"+ RESET +
-                    "       Bienvenue chere " + formateur.getNom() + "                                            "+YELLOW +"*"+ RESET);
-            System.out.println(YELLOW +"*"+ RESET +"      Tu possèdes  " + formateur.getPv()
-                    + " points de vie,                                         "+YELLOW +"*"+ RESET);
-            System.out.println(YELLOW +"*"+ RESET +"      tu possèdes  " + formateur.getExp()
-                    + " points d'expérience                                    "+YELLOW +"*"+ RESET);
-            System.out.println(YELLOW +"*"+ RESET +"      et tes armes :  " + formateur.getArmes()+YELLOW +" *"+ RESET);
-            System.out.println(YELLOW +"******************************************************************************"+RESET);
+            System.out.println(YELLOW + "*" + RESET + "       Bienvenue chere " + formateur.getNom()
+                    + "                                            " + YELLOW + "*" + RESET);
+            System.out.println(YELLOW + "*" + RESET + "      Tu possèdes  " + formateur.getPv()
+                    + " points de vie,                                         " + YELLOW + "*" + RESET);
+            System.out.println(YELLOW + "*" + RESET + "      tu possèdes  " + formateur.getExp()
+                    + " points d'expérience                                    " + YELLOW + "*" + RESET);
+            System.out.println(
+                    YELLOW + "*" + RESET + "      et tes armes :  " + formateur.getArmes() + YELLOW + " *" + RESET);
+            System.out.println(
+                    YELLOW + "******************************************************************************" + RESET);
         }
     }
 
@@ -126,7 +129,8 @@ public class PlateauDeJeu {
             System.out.println("-> Pourra a tout moment casser votre code, et pousser sur votre Repo");
             System.out.println("-> Si vous perdez tous vos points de vie vous perderez à tout jamais votre Repo Git");
             System.out.println();
-            System.out.println(YELLOW+ "*************************************************************************************"+ RESET);
+            System.out.println(YELLOW
+                    + "*************************************************************************************" + RESET);
             System.out.println();
         } else {
             System.out.println(YELLOW
@@ -138,7 +142,8 @@ public class PlateauDeJeu {
             System.out.println("-> Pourra a tout moment casser vos requêtes Sql, et Droper vos tables");
             System.out.println("-> Si vous perdez tous vos points de vie votre Database sera perdue à tout jamais");
             System.out.println();
-            System.out.println(YELLOW+"*************************************************************************************" +RESET);
+            System.out.println(YELLOW
+                    + "*************************************************************************************" + RESET);
             System.out.println();
         }
 
@@ -166,10 +171,13 @@ public class PlateauDeJeu {
         System.out.println(RED + "***Dans cette quête vous affronterez: ***" + RESET);
         System.out.println();
         afficherCaracteristiquesPerso(ennemi);
-
+        int nombreDeCombat = 1;
         while (ennemi.getPv() > 0 && perso.getPv() > 0) {
+
             if (perso.getPv() > 0) {
-                System.out.println("Début du combat...");
+                System.out.println();
+                System.out.println("Début du combat..." + "... n° " + nombreDeCombat);
+                nombreDeCombat++;
                 persoCombat.attaque(perso.getArmes().get(0));
                 ennemiCombat.defense(ennemi, perso.getArmes().get(0));
                 System.out.println();
@@ -198,7 +206,9 @@ public class PlateauDeJeu {
             System.out.println("->>>>>>>Game Over<<<<<<<<-" + RESET);
             ennemi.setExp(ennemi.getExp() + 1);
         }
-
+        System.out.println();
+        System.out.println("Bravo!!Vous vous êtes affronté " + nombreDeCombat + " fois");
+        System.out.println();
     }
 
     // ____________________________________________Main________________________________________________________________
@@ -211,7 +221,7 @@ public class PlateauDeJeu {
         Personnage perso = creerPersonnage(choixPerso);
         do {
             if (reponse != 0) {
-                System.out.println("Voulez vous changer de personnage? O:oui ou N:non");
+                System.out.println(YELLOW + "Voulez vous changer de personnage? O:oui ou N:non" + RESET);
                 int changerPerso = scan.next().charAt(0);
                 if (changerPerso == 'O') {
                     choixPerso = menuPrincipal();
@@ -219,13 +229,12 @@ public class PlateauDeJeu {
                 }
             }
             jouer(perso, ennemi, choixPerso);
-            System.out.println(" Souhaitez vous rejouer une partie? O: oui ou N: non");
+            System.out.println(YELLOW + "Souhaitez vous rejouer une partie? O: oui ou N: non" + RESET);
             reponse = scan.next().charAt(0);
 
         } while (reponse == 'O');
 
         System.out.println(RED + "A la prochaine! pour une nouvelle aventure!!!" + RESET);
-
     }
 
 }
