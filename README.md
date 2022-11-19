@@ -3,9 +3,11 @@
 ![](https://github.com/christ-dos/IDP_Jeu_de_roles/blob/develop/images/img_jeuDeRolejpg.jpg)
 
 >Il s'agit ici d'un petit jeu de rôle en console qui fait intervenir 3 personnages: 
+
       1. Une codeuse
       2. Une vempirette
       3.Et leur ennemi juré le formateur
+      
 > Ensemble ils livreont un combat sans merci!
 >
 >Ce petit jeux a été codé en java.
