@@ -1,4 +1,4 @@
-<h1>Projet jeu de Rôles👋</h1>
+<h1 align="center">Projet jeu de Rôles👋</h1>
 
 ![](https://github.com/christ-dos/IDP_Jeu_de_roles/blob/develop/images/img_jeuDeRolejpg.jpg)
 
