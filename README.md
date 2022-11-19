@@ -6,7 +6,7 @@
 
       1. Une codeuse
       2. Une vempirette
-      3.Et leur ennemi juré le formateur
+      3. Et leur ennemi juré le formateur
       
 > Ensemble ils livreont un combat sans merci!
 >
