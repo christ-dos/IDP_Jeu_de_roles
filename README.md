@@ -1,6 +1,6 @@
 <h1>Projet jeu de Rôles👋</h1>
 
-![](/ProjetJeuDeRole/images/img_jeuDeRolejpg.jpg)
+![](https://github.com/christ-dos/IDP_Jeu_de_roles/blob/develop/images/img_jeuDeRolejpg.jpg)
 
 >Il s'agit ici d'un petit jeu de rôle en console qui fait intervenir 3 personnages: 
       1. Une codeuse

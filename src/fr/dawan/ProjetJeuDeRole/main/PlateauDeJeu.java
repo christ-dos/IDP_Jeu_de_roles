@@ -224,7 +224,7 @@ public class PlateauDeJeu {
 
         } while (reponse == 'O');
 
-        System.out.println(RED + "A la prochaine pour une nouvelle aventure!!!" + RESET);
+        System.out.println(RED + "A la prochaine! pour une nouvelle aventure!!!" + RESET);
 
     }
 
